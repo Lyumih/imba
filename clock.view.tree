@@ -1,0 +1,46 @@
+$imba_app $mol_page
+	title \$mol clock imba.io
+	body /
+		<= Clock $mol_view
+			sub /
+				<= Russia $imba_clock
+					bg \blue
+					country \Russia
+					utc 3
+				<= NewYork $imba_clock
+					bg \pink
+					country \New York
+					utc -5
+				<= SanFran $imba_clock
+					bg \purple
+					country \San Fran
+					utc -8
+				<= London $imba_clock
+					bg \indigo
+					country \London
+					utc 0
+				<= Tokyo $imba_clock
+					bg \sky
+					country \Tokyo
+					utc 9
+$imba_clock $mol_view
+	country \Страна
+	utc 0
+	bg \red
+	style *
+		^
+		background <= bg
+	sub /
+		<= Country $mol_text
+			text <= country
+		<= Hour $imba_arrow
+			deg <= hours
+		<= Minute $imba_arrow
+			deg <= minutes
+		<= Second $imba_arrow
+			deg <= seconds
+		<= Circle $imba_arrow
+
+$imba_arrow $mol_view
+	deg \0
+

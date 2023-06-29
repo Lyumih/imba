@@ -1,0 +1,54 @@
+[imba_app_clock] {
+	gap: var(--mol_gap_block);
+}
+
+[imba_clock] {
+	background: purple;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: var(--mol_gap_block);
+}
+
+[imba_clock_country_string] {
+	color: darkgray;
+}
+
+[imba_clock_circle] {
+	background-color: red;
+	width: var(--mol_gap_block);
+	height: var(--mol_gap_block);
+	border-radius: var(--mol_gap_block);
+	position: absolute;
+	top: calc(50% - 2px);
+}
+
+
+[imba_clock_hour] {
+	width: 5px;
+	height: 30%;
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	transform-origin: top center;
+}
+
+[imba_clock_minute] {
+	width: 4px;
+	height: 42%;
+	background-color: gray;
+	position: absolute;
+	top: 50%;
+	transform-origin: top center;
+}
+
+[imba_clock_second] {
+	width: 2px;
+	height: 45%;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	transform-origin: top center;
+}
